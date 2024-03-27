@@ -69,19 +69,31 @@ def main():
             break
         elif command == "list":
             print_currencies(currencies)
+            print()
+            print("List - lists the diffrent currencies ")
+            print("Convert - convert from one currency to another")
+            print("Rate- Get the exchage rate of two currencies")
+            print()
         elif command == "convert":
             currency1 = input("Enter a base currency id: ").upper()
             amount = input(f"Enter an amount in {currency1}: ")
             currency2 = input("Enter a currency to convert to: ").upper()
             convert(currency1, currency2, amount)
+            print()
+            print("List - lists the diffrent currencies ")
+            print("Convert - convert from one currency to another")
+            print("Rate- Get the exchage rate of two currencies")
+            print()
         elif command  == "rate":
              currency1 = input("Enter a currency id: ").upper()
              currency2 = input("Enter a currency to convert to: ").upper()
              exchange_rate(currency1, currency2)
+             print()
+             print("List - lists the diffrent currencies ")
+             print("Convert - convert from one currency to another")
+             print("Rate- Get the exchage rate of two currencies")
+             print()
         else:
             print("Unrecognized command!")
             
 main()
-
-            
-        
