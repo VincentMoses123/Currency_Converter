@@ -7,10 +7,17 @@ API_KEY = "9b99631642666327eb57"
 
 printer = PrettyPrinter()
 
+
 def get_currencies():
     endpoint = f"api/v7/currencies?apiKey={API_KEY}"
     url = BASE_URL + endpoint
-    data = get(url).json()['results']
+    try:
+        response = get(url)
+        response.raise_for_status()  # Raises an HTTPError if the response was unsuccessful
+        data = response.json().get('results', {})
+    except Exception.RequestException as e:
+        print(f"An error occurred: {e}")
+        return []
     
     data = list(data.items())
     data.sort()
