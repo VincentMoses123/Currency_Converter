@@ -74,6 +74,8 @@ def main():
         command = input("Enter a command (q to quit): ").lower()
         
         if command == "q":
+            print("Thanks for using the converter!")
+            print(" ")
             break
         elif command == "list":
             print_currencies(currencies)
