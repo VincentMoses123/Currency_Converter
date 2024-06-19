@@ -8,16 +8,17 @@ from textual.widgets import Button, Footer, Header, Static
 
 
 class get_currencies(Static):
-    " "
+    "Currencies"
 
 class main(Static):
     """A CC widget."""
 
     def compose(self) -> ComposeResult:
-        """Create child widgets of a stopwatch."""
-        yield Button("Start", id="start", variant="success")
-        yield Button("Stop", id="stop", variant="error")
-        yield Button("Reset", id="reset")
+        """Create child widgets of a Converter."""
+        yield Button("List", id="start", variant="success")
+        yield Button("Convert", id="stop", variant="error")
+        yield Button("Rate", id="reset")
+        yield Button("Quit")
 
 class Currency_Converter(App):
     """My Currency Converter UI"""
